@@ -1,0 +1,452 @@
+/* ===================================================
+   SMILE VAN VIP PHUKET — responsive.css
+   Breakpoints:
+   - Desktop default  : > 1024px  (ใน style.css)
+   - Tablet           : ≤ 1024px
+   - Tablet / Mobile  : ≤ 768px
+   - Mobile           : ≤ 480px
+   - Mobile XS        : ≤ 360px
+   - Print
+   =================================================== */
+
+
+/* ===================================================
+   TABLET  (max-width: 1024px)
+   iPad Pro, iPad Air, Surface Pro, ฯลฯ
+   =================================================== */
+@media (max-width: 1024px) {
+
+  .top-left {
+    display: none;
+  }
+
+  .top-bar-inner {
+    justify-content: center;
+  }
+
+  .top-right {
+    gap: 16px;
+  }
+
+  .feat-about {
+    gap: 40px;
+    padding: 36px 32px;
+  }
+
+  .feat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .contact-grid {
+    padding: 36px 32px;
+  }
+
+}
+
+
+/* ===================================================
+   TABLET / LARGE MOBILE  (max-width: 768px)
+   iPad Mini, iPad (gen 9), large phones landscape
+   =================================================== */
+@media (max-width: 768px) {
+
+  :root {
+    --navbar-h: 62px;
+  }
+
+  .top-left {
+    display: none;
+  }
+
+  .top-bar-inner {
+    justify-content: center;
+  }
+
+  .top-right {
+    gap: 16px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-right {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100vh;
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 90px 28px 40px;
+    gap: 32px;
+    z-index: 999;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-right.open {
+    right: 0;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 17px;
+    padding: 10px 14px;
+    width: 100%;
+    display: block;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .feat-about {
+    flex-direction: column;
+    gap: 28px;
+    padding: 28px 24px;
+    margin-bottom: 24px;
+  }
+
+  .feat-image img {
+    max-width: 280px;
+  }
+
+  .hero {
+    min-height: 420px;
+    padding: 80px 0 60px;
+  }
+
+  .slide {
+    background-position: center;
+    transform: none !important;
+  }
+
+  .stat {
+    padding: 0 18px;
+  }
+
+  .stat strong {
+    font-size: 22px;
+  }
+
+  .stat-divider {
+    height: 28px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .lightbox-nav {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-info a,
+  .footer-info li {
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+
+  .contact-grid {
+    padding: 28px 20px;
+    margin: 0 8px;
+  }
+
+  .contact-btns {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .float-line {
+    bottom: 20px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .scroll-top {
+    bottom: 82px;
+    right: 16px;
+  }
+
+}
+
+
+/* ===================================================
+   MOBILE  (max-width: 480px)
+   iPhone, Android phones portrait
+   =================================================== */
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .top-bar {
+    display: none;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-header {
+    margin-bottom: 28px;
+  }
+
+  .nav-inner {
+    height: 70px;
+  }
+
+  .logo-icon {
+    width: 110px;
+  }
+
+  .brand-sub {
+    display: none;
+  }
+
+  .hero {
+    padding: 64px 0 48px;
+    min-height: 380px;
+  }
+
+  .hero-content {
+    padding: 22px 18px;
+  }
+
+  .cta-group {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  .cta-group .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .hero-stats {
+    gap: 0;
+  }
+
+  .stat {
+    padding: 0 12px;
+  }
+
+  .stat strong {
+    font-size: 20px;
+  }
+
+  .stat span {
+    font-size: 11px;
+  }
+
+  .feat-about {
+    padding: 24px 16px;
+    gap: 24px;
+  }
+
+  .feat-text h3 {
+    font-size: 20px;
+  }
+
+  .feat-text h3::after {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .feat-text p {
+    font-size: 15px;
+  }
+
+  .feat-image img {
+    max-width: 240px;
+  }
+
+  .feat-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feat-card {
+    padding: 28px 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .contact-grid {
+    padding: 24px 16px;
+    margin: 0;
+  }
+
+  .contact-info h3 {
+    font-size: 20px;
+  }
+
+  .contact-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contact-btns .btn {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btns .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .footer-col p {
+    max-width: 100%;
+  }
+
+  .footer-info a,
+  .footer-info li {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .fab {
+    bottom: 200px;
+    right: 16px;
+  }
+
+  .fab-main {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+  .fab-item{
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+
+  }
+
+}
+
+
+/* ===================================================
+   MOBILE XS  (max-width: 360px)
+   iPhone SE, Galaxy A series 
+   =================================================== */
+@media (max-width: 360px) {
+
+  /* --- Logo: เล็กลง --- */
+  .logo-icon {
+    width: 90px;
+  }
+
+  .brand {
+    font-size: 13px;
+  }
+
+  .hero-content {
+    padding: 16px 12px;
+  }
+
+  .stat {
+    padding: 0 8px;
+  }
+
+  .stat strong {
+    font-size: 17px;
+  }
+
+  .stat span {
+    font-size: 10px;
+  }
+
+  .stat-divider {
+    height: 22px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-btns .btn {
+    font-size: 14px;
+    padding: 11px 16px;
+  }
+
+  .section-tag {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+}
+
+
+/* ===================================================
+   PRINT
+   =================================================== */
+@media print {
+
+  .navbar,
+  .top-bar,
+  .float-line,
+  .scroll-top,
+  .lightbox,
+  .fab {
+    display: none !important;
+  }
+
+  .hero {
+    background: var(--navy) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-size: 12pt;
+  }
+
+}

@@ -18,9 +18,7 @@ https://smilevanvipphuket.com
 # Tech Stack
 - HTML5
 - CSS3 / Responsive Design
-- JavaScript (Vanilla + jQuery)
-- Google Maps API
-- GMaps.js
+- JavaScript 
 
 # Contact To Rent van
 
